@@ -1,25 +1,32 @@
 const express = require('express')
 const router = express.Router()
 
-let response = {
-    "code": 200,
-    "message": "Berhasil Mengirim Data",
-    "data":[
-        {
-            "id": 1,
-            "username": "taufiq",
-            "password" : "taufiq123"
-        },
-        {
-            "id": 2,
-            "username": "nisrina",
-            "password" : "nisrina123"
-        }
-    ]
+let GetResponse = (status, message, data) => {
+    let response ={
+        status,
+        messege,
+        data
+    }
 }
 
 router.get('/', (req, res) => {
-    res.json(response)
+    let response = GetResponse(
+        200,
+        "Berhasil",
+        [
+            {
+                "id" : 1,
+                "username" : "taufiq",
+                "password" : "taufiq123"
+            },
+            {
+                "id" : 2,
+                "username" : "nisrina",
+                "password" : "nisrina123"
+            }
+        ]
+    )
+    res.status(200).json(response)
 })
 
 module.exports = router
