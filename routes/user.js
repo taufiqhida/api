@@ -19,7 +19,7 @@ let response = {
 }
 
 router.get('/', (req, res) => {
-
+    res.json(response)
 })
 
 module.exports = router
