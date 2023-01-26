@@ -30,4 +30,13 @@ router.get('/', (req, res) => {
     res.status(200).json(response)
 })
 
+router.post('/', (req, res) => {
+    const response = GetResponse(
+        202,
+        "Berhasil Menginpukan Data",
+        req.body
+    )
+    res.status(202).json(response)
+})
+
 module.exports = router
