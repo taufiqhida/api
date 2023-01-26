@@ -4,9 +4,10 @@ const router = express.Router()
 let GetResponse = (status, message, data) => {
     let response ={
         status,
-        messege,
+        message,
         data
     }
+    return response
 }
 
 router.get('/', (req, res) => {
