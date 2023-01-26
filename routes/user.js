@@ -1,5 +1,5 @@
 const express = require('express')
-const router = express.Router
+const router = express.Router()
 
 let response = {
     "code": 200,
@@ -21,3 +21,5 @@ let response = {
 router.get('/', (req, res) => {
 
 })
+
+module.exports = router

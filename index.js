@@ -1,7 +1,10 @@
 const express = require('express')
 const app = express();
+const userRouters = require('./routes/user')
 
 app.use(express.json())
+
+app.use('/users', userRouters)
 
 app.get('/', (req, res) => {
     res.send(`Hello Word`)
